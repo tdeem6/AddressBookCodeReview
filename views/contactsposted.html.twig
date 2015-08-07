@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+        <link rel='stylesheet' href='css/styles.css'>
+        <title>Address book contacts stored:</title>
+    </head>
+      <body>
+          <div class='container'>
+
+              {% if ((newcontact.getName and newcontact.getPhone) and newcontact.getAddress) is not empty %}
+                  <h1>This contact has been posted.</h1>
+                  <ul>
+                      <div class='contact'>
+                          <li><span class='title'>{{ newcontact.getName}}</span></li>
+                          <li>Phone number: {{ newcontact.getPhone }}</li>
+                          <li>Address: {{ new.contact.getAddress }}</li>
+                      </div>
+                  </ul>
+              {% else %}
+                  <h1>Something went wrong!  You screwed it up!</h1>
+              {% endif %}
+              <h3><a href='/'>Return</a><h3>
+          </div>
+      </body>
+  </html>              
